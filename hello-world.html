@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>Thinking Out Loud</title>
+        <title>Hello World!</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
         <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Thinking Out Loud Atom Feed" />
 
@@ -15,13 +15,18 @@
         <header id="banner" class="body">
                 <h1><a href="/">Thinking Out Loud </a></h1>
                 <nav><ul>
-                    <li><a href="/category/coding.html">Coding</a></li>
+                    <li class="active"><a href="/category/coding.html">Coding</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/hello-world.html" rel="bookmark"
+           title="Permalink to Hello World!">Hello World!</a></h1>
+    </header>
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="/hello-world.html">Hello World!</a></h1>
+    <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2015-11-02T00:00:00-06:00">
                 Published: Mon 02 November 2015
@@ -32,7 +37,7 @@
         </address>
 <p>In <a href="/category/coding.html">Coding</a>.</p>
 <p>tags: <a href="/tag/python.html">python</a> <a href="/tag/django.html">django</a> <a href="/tag/pandas.html">pandas</a> <a href="/tag/git.html">git</a> <a href="/tag/pelican.html">pelican</a> </p>
-</footer><!-- /.post-info --><p>So after abandoning my CS degree for the past 10 years, I figured I would get a bit up to speed on what the cool kids are doing these days. Here's what I looked at this summer.</p>
+</footer><!-- /.post-info -->      <p>So after abandoning my CS degree for the past 10 years, I figured I would get a bit up to speed on what the cool kids are doing these days. Here's what I looked at this summer.</p>
 <h4>PYTHON</h4>
 <p>The first step was to decide which "new" programming language to learn. I went on Github and looked at which languages had the largest number of repositories. This helped me narrow it down to Python and Ruby though there was a ton of other languages I've never heard of like Haskell / GO / Swift etc. I briefly tried out both, then chose Python mostly because of IPython/Pandas (see below) and because animals are cooler than jewelery.</p>
 <p>But it doesn't end there.</p>
@@ -51,8 +56,11 @@
 <p>I've always wanted to keep a journal but I never took the time to do it. After trying out-of-the-box offerings like Wordpress / Tumblr, I decided to go for the full customization route and build my own. I needed a programming project for Python anyway.</p>
 <p>I first started with Django which generates dynamic web sites (html on the fly). I used the official Django <a href="https://docs.djangoproject.com/en/1.8/intro/tutorial01/">tutorial</a> which is quite good. I never learned HTML / CSS before but with resources like Bootstrap / Stack Overflow, it was pretty easy to hack something together quickly. As the website progressed, I found this to be cumbersome as a blogging platform so I turned it into a travel journal instead and deployed it to Heroku <a href="http://dai-yu.com/">here</a>.</p>
 <p>For a written blog, I decided to use a static html generator called Pelican which pre-generates the html so pages load faster. You simply create a Markdown document and can easily embed basically any content (even ipython notebooks!) via <a href="https://github.com/getpelican/pelican-plugins/tree/master/liquid_tags">liquidtags</a>. Pelican then magically creates the html pages which I used Github pages to host. You are looking at the result of that now.</p>
-<p><em>So that's a quick summary of my programming adventure and the tools I've used along the way. Now here's hoping I continue updating this blog and don't just drop it after a month!</em></p>                </article>
-            </aside><!-- /#featured -->
+<p><em>So that's a quick summary of my programming adventure and the tools I've used along the way. Now here's hoping I continue updating this blog and don't just drop it after a month!</em></p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>links</h2>
