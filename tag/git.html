@@ -1,86 +1,110 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="utf-8" />
-        <title>Thinking Out Loud - git</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
-        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Thinking Out Loud Atom Feed" />
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
 
-        <!--[if IE]>
-            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+    <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Dai's Blog Atom">
+
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+
+    <meta name="author" content="Dai Yu" />
+    <meta name="description" content="" />
+<meta property="og:site_name" content="Dai's Blog"/>
+<meta property="og:type" content="blog"/>
+<meta property="og:title" content="Dai's Blog"/>
+<meta property="og:description" content=""/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content=""/>
+
+  <title>Dai's Blog &ndash;     Tag git
+</title>
+
 </head>
+<body>
+  <aside>
+    <div>
+      <a href="">
+        <img src="/theme/img/profile.png" alt="Dai Yu" title="Dai Yu">
+      </a>
+      <h1><a href="">Dai Yu</a></h1>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">Thinking Out Loud </a></h1>
-                <nav><ul>
-                    <li><a href="/category/coding.html">Coding</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
+<p>Thinking Out Loud</p>
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="/hello-world.html">Hello World!</a></h1>
-<footer class="post-info">
-        <abbr class="published" title="2015-11-02T00:00:00-06:00">
-                Published: Mon 02 November 2015
-        </abbr>
+      <ul class="social">
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/daiyu" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-facebook" href="https://www.facebook.com/dai.dan.yu" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="sc-plane" href="http://www.dai-yu.com" target="_blank"><i class="fa fa-plane"></i></a></li>
+      </ul>
+    </div>
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/dai-yu.html">Dai Yu</a>
-        </address>
-<p>In <a href="/category/coding.html">Coding</a>.</p>
-<p>tags: <a href="/tag/python.html">python</a> <a href="/tag/django.html">django</a> <a href="/tag/pandas.html">pandas</a> <a href="/tag/git.html">git</a> <a href="/tag/pelican.html">pelican</a> </p>
-</footer><!-- /.post-info --><p>So after abandoning my CS degree for the past 10 years, I figured I would get a bit up to speed on what the cool kids are doing these days. Here's what I looked at this summer.</p>
+
+  </aside>
+  <main>
+
+
+
+
+<article>
+  <header>
+    <h2><a href="/hello-world.html#hello-world">Hello World!</a></h2>
+    <p>
+          Posted on Mon 02 November 2015 in <a href="/category/coding.html">Coding</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="/tag/python.html">python</a>,              <a href="/tag/django.html">django</a>,              <a href="/tag/pandas.html">pandas</a>,              <a href="/tag/git.html">git</a>,              <a href="/tag/pelican.html">pelican</a>
+    </p>
+  </header>
+  <div>
+      <p>So after abandoning my CS degree for the past 10 years, I figured I would get a bit up to speed on what the cool kids are doing these days. Here's what I looked at this summer.</p>
 <h4>PYTHON</h4>
-<p>The first step was to decide which "new" programming language to learn. I went on Github and looked at which languages had the largest number of repositories. This helped me narrow it down to Python and Ruby though there was a ton of other languages I've never heard of like Haskell / GO / Swift etc. I briefly tried out both, then chose Python mostly because of IPython/Pandas (see below) and because animals are cooler than jewelery.</p>
-<p>But it doesn't end there.</p>
-<p>Since everything is done via the web now and no one mails installation discs anymore (remember formatting those AOL floppies?), you now need to decide on a web framework for your language as well. Python for example has Django, Flask, Bottle, Pyramid along with some other smaller ones. I picked Django simply because it was the biggest. After that, you need to pick a database which is typically between SQLite or a relational DB like PostgreSQL or MySQL. I went with SQLite since it was the easiest to start with (your DB is a simple file) but then bumped into issues when deploying to Heroku as they have an "ephemeral filesystem" so I had to rebuild the DB in Postgres.</p>
-<p>So have fun deciding between the 30+ different combinations possible and then hoping you don't have to change your mind later on.  </p>
-<h4>IPYTHON</h4>
-<p>A big reason why I decided to go the Python route was because of IPython notebook/pandas library. IPython (now <a href="http://jupyter.org/">Jupyter</a>) provides a way to run live JUlia/PYthon/R code in a notebook cell by cell (similar to Matlab) which makes it great for building things and playing around with data. Numpy and Pandas provide a great analytic library along with some pretty neat data manipulation tools (sequencing data, merging data with holes/NaNs in your dataset etc). For example, this is one of the notebooks I made to look at YTD Returns on a selection of stocks:</p>
-<p>{% notebook YTD_Returns.ipynb %}</p>
-<h4>DEVELOPMENT / DEPLOYMENT</h4>
-<p>I decided to develop locally on my Windows laptop. While it was ok to try things out, I wasted a lot of time downloading separate builds or setting PATH variables etc just to get things to work. When the instructions simply say "pip install X", you may end up having to do 5 extra steps for Windows users. As for my editor, I went with <a href="http://www.sublimetext.com/">Sublime</a> which I like very much though I did miss the dog icon in my old Crimson Editor.  </p>
-<p>GIT is another "new" thing that I completely missed in the past 10 years. It is basically a version control system that everyone seems to be using for code development today. This xkcd comic summarizes how I feel about git.</p>
-<p>{% img http://imgs.xkcd.com/comics/git.png %}</p>
-<p>I basically read a handbook, memorized 5 shell commands (git init/clone/add/commit/remote) and treat Github as a free ftp server to store my code as opposed to actual version control. Maybe one day I will figure out how to use it properly. </p>
-<p>For deployment, I used <a href="http://heroku.com/">heroku</a>. Python Anywhere was another free option but it only supports python whereas heroku supports other languages. </p>
-<h4>WEBSITE / BLOGGING</h4>
-<p>I've always wanted to keep a journal but I never took the time to do it. After trying out-of-the-box offerings like Wordpress / Tumblr, I decided to go for the full customization route and build my own. I needed a programming project for Python anyway.</p>
-<p>I first started with Django which generates dynamic web sites (html on the fly). I used the official Django <a href="https://docs.djangoproject.com/en/1.8/intro/tutorial01/">tutorial</a> which is quite good. I never learned HTML / CSS before but with resources like Bootstrap / Stack Overflow, it was pretty easy to hack something together quickly. As the website progressed, I found this to be cumbersome as a blogging platform so I turned it into a travel journal instead and deployed it to Heroku <a href="http://dai-yu.com/">here</a>.</p>
-<p>For a written blog, I decided to use a static html generator called Pelican which pre-generates the html so pages load faster. You simply create a Markdown document and can easily embed basically any content (even ipython notebooks!) via <a href="https://github.com/getpelican/pelican-plugins/tree/master/liquid_tags">liquidtags</a>. Pelican then magically creates the html pages which I used Github pages to host. You are looking at the result of that now.</p>
-<p><em>So that's a quick summary of my programming adventure and the tools I've used along the way. Now here's hoping I continue updating this blog and don't just drop it after a month!</em></p>                </article>
-            </aside><!-- /#featured -->
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>links</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="#">You can modify those links in your config file</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-                            <li><a href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+<p>The first step was to decide which "new" programming language to learn …</p>
+      <br>
+      <a class="btn" href="/hello-world.html#hello-world">    Continue reading
+</a>
+  </div>
+</article>
 
-                            <li><a href="#">You can add links in your config file</a></li>
-                            <li><a href="#">Another social link</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
+  <div class="pagination">
+  </div>
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
 
+
+    <footer>
+<p>&copy; Dai Yu </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Dai's Blog ",
+  "url" : "",
+  "image": "",
+  "description": ""
+}
+</script>
 </body>
 </html>

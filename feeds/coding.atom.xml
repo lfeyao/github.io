@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Thinking Out Loud - Coding</title><link href="/" rel="alternate"></link><link href="/feeds/coding.atom.xml" rel="self"></link><id>/</id><updated>2015-11-02T00:00:00-06:00</updated><entry><title>Hello World!</title><link href="/hello-world.html" rel="alternate"></link><published>2015-11-02T00:00:00-06:00</published><updated>2015-11-02T00:00:00-06:00</updated><author><name>Dai Yu</name></author><id>tag:None,2015-11-02:/hello-world.html</id><summary type="html">&lt;p&gt;So after abandoning my CS degree for the past 10 years, I figured I would get a bit up to speed on what the cool kids are doing these days. Here's what I looked at this summer.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Dai's Blog - Coding</title><link href="/" rel="alternate"></link><link href="/feeds/coding.atom.xml" rel="self"></link><id>/</id><updated>2015-11-02T00:00:00-08:00</updated><entry><title>Hello World!</title><link href="/hello-world.html" rel="alternate"></link><published>2015-11-02T00:00:00-08:00</published><updated>2015-11-02T00:00:00-08:00</updated><author><name>Dai Yu</name></author><id>tag:None,2015-11-02:/hello-world.html</id><summary type="html">&lt;p&gt;So after abandoning my CS degree for the past 10 years, I figured I would get a bit up to speed on what the cool kids are doing these days. Here's what I looked at this summer.&lt;/p&gt;
 &lt;h4&gt;PYTHON&lt;/h4&gt;
 &lt;p&gt;The first step was to decide which "new" programming language to learn …&lt;/p&gt;</summary><content type="html">&lt;p&gt;So after abandoning my CS degree for the past 10 years, I figured I would get a bit up to speed on what the cool kids are doing these days. Here's what I looked at this summer.&lt;/p&gt;
 &lt;h4&gt;PYTHON&lt;/h4&gt;
@@ -9,11 +9,316 @@
 &lt;p&gt;So have fun deciding between the 30+ different combinations possible and then hoping you don't have to change your mind later on.  &lt;/p&gt;
 &lt;h4&gt;IPYTHON&lt;/h4&gt;
 &lt;p&gt;A big reason why I decided to go the Python route was because of IPython notebook/pandas library. IPython (now &lt;a href="http://jupyter.org/"&gt;Jupyter&lt;/a&gt;) provides a way to run live JUlia/PYthon/R code in a notebook cell by cell (similar to Matlab) which makes it great for building things and playing around with data. Numpy and Pandas provide a great analytic library along with some pretty neat data manipulation tools (sequencing data, merging data with holes/NaNs in your dataset etc). For example, this is one of the notebooks I made to look at YTD Returns on a selection of stocks:&lt;/p&gt;
-&lt;p&gt;{% notebook YTD_Returns.ipynb %}&lt;/p&gt;
+&lt;p&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[81]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;matplotlib&lt;/span&gt; inline
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[82]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;datetime&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;dt&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas.io.data&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;web&lt;/span&gt;
+
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pandas.tseries.holiday&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;USFederalHolidayCalendar&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pandas.tseries.offsets&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;CustomBusinessDay&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;CustomBusinessMonthBegin&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[83]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;today&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;dt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;date&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;today&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;bday_us&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;CustomBusinessDay&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;calendar&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;USFederalHolidayCalendar&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;span class="n"&gt;last_bd&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;today&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;bday_us&lt;/span&gt;
+&lt;span class="n"&gt;start_year&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;today&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;month&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;day&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[84]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;ticker_list&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;MSFT&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Microsoft&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+               &lt;span class="s1"&gt;&amp;#39;AAPL&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Apple&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+               &lt;span class="s1"&gt;&amp;#39;AMZN&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Amazon&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+               &lt;span class="s1"&gt;&amp;#39;GOOG&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Google&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+               &lt;span class="s1"&gt;&amp;#39;BABA&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Alibaba&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+               &lt;span class="s1"&gt;&amp;#39;YHOO&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Yahoo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="n"&gt;price_change&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[85]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;ticker&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;ticker_list&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;prices&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;web&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DataReader&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ticker&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;yahoo&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;start_year&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;last_bd&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;closing_prices&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;prices&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Adj Close&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="n"&gt;change&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;closing_prices&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;closing_prices&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;closing_prices&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ticker_list&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;ticker&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="n"&gt;price_change&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;change&lt;/span&gt;
+
+&lt;span class="n"&gt;pc&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Series&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;price_change&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;pc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sort_values&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;inplace&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[86]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;kind&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;bar&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;YTD Return (%)&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ylabel&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Pct Change (%)&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+&lt;div class="prompt output_prompt"&gt;Out[86]:&lt;/div&gt;
+
+
+
+&lt;div class="output_text output_subarea output_execute_result"&gt;
+&lt;pre&gt;&amp;lt;matplotlib.text.Text at 0x8e37ba8&amp;gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div class="output_area"&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+
+&lt;div class="output_png output_subarea "&gt;
+&lt;img src="data:image/png;base64,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
+"
+&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[&amp;nbsp;]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; 
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+ 
+
+&lt;/p&gt;
 &lt;h4&gt;DEVELOPMENT / DEPLOYMENT&lt;/h4&gt;
 &lt;p&gt;I decided to develop locally on my Windows laptop. While it was ok to try things out, I wasted a lot of time downloading separate builds or setting PATH variables etc just to get things to work. When the instructions simply say "pip install X", you may end up having to do 5 extra steps for Windows users. As for my editor, I went with &lt;a href="http://www.sublimetext.com/"&gt;Sublime&lt;/a&gt; which I like very much though I did miss the dog icon in my old Crimson Editor.  &lt;/p&gt;
 &lt;p&gt;GIT is another "new" thing that I completely missed in the past 10 years. It is basically a version control system that everyone seems to be using for code development today. This xkcd comic summarizes how I feel about git.&lt;/p&gt;
-&lt;p&gt;{% img http://imgs.xkcd.com/comics/git.png %}&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://imgs.xkcd.com/comics/git.png"&gt;&lt;/p&gt;
 &lt;p&gt;I basically read a handbook, memorized 5 shell commands (git init/clone/add/commit/remote) and treat Github as a free ftp server to store my code as opposed to actual version control. Maybe one day I will figure out how to use it properly. &lt;/p&gt;
 &lt;p&gt;For deployment, I used &lt;a href="http://heroku.com/"&gt;heroku&lt;/a&gt;. Python Anywhere was another free option but it only supports python whereas heroku supports other languages. &lt;/p&gt;
 &lt;h4&gt;WEBSITE / BLOGGING&lt;/h4&gt;
