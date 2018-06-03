@@ -5,7 +5,7 @@
 I pulled inventory both for greater SD and our zip code. Both show the story of rapidly …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Since we are moving to San Diego in July, figured would play around with Zillow data to check out the market in our zip code.&lt;/p&gt;
 &lt;p&gt;Some metrics that I pulled:&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Inventory Seasonally Adjusted&lt;/strong&gt;: 
-I pulled inventory both for greater SD and our zip code. Both show the story of rapidly shrinking inventory &lt;/p&gt;
+I pulled inventory both for greater SD and our zip code. Both show the story of rapidly shrinking inventory. &lt;/p&gt;
 &lt;p&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
@@ -967,7 +967,7 @@ j6kJVsefAAAAAElFTkSuQmCC
  
 
 &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Rental Yield&lt;/strong&gt;: Home value is divided by 12 times its estimated monthly rent price. We plot the inverse of this to look at the rental yield (or cap rate in RE lingo).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Rental Yield&lt;/strong&gt;: Zillow has a price to rent Index (Home value divided by 12 times its estimated monthly rent price.) We plot the inverse of this to look at the rental yield (or cap rate in RE lingo).&lt;/p&gt;
 &lt;p&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
