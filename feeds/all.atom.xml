@@ -399,10 +399,7 @@ iEjmaTejiIhknoqZiIhknoqZiIhknoqZiIhknoqZiIhknoqZiIhknoqZiIhknoqZiIhk3v8BRjrg
 
 &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Prices&lt;/strong&gt;: 
-Small available inventory leads to rising prices. I pulled the Zillow 5BR Home Price Index and looked at the following on a PSF basis. &lt;/p&gt;
-&lt;p&gt;Median Listing Price Per Square Foot - Five Or More Bedrooms|MLPF5B
-Median Listing Price Per Square Foot - Four Bedrooms|MLPF4B
-Median Sold Price Per Square Foot - All Homes|MSPFAH&lt;/p&gt;
+Small available inventory leads to rising prices. I pulled the Zillow 5BR Home Price Index and looked at the median sales and listing prices on a PSF basis. &lt;/p&gt;
 &lt;p&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
@@ -972,6 +969,20 @@ j6kJVsefAAAAAElFTkSuQmCC
 &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Rental Yield&lt;/strong&gt;: Home value is divided by 12 times its estimated monthly rent price. We plot the inverse of this to look at the rental yield (or cap rate in RE lingo).&lt;/p&gt;
 &lt;p&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[142]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;pricetorent&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;q&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;ZILLOW/Z92130_PRRAH&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;caprate&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;pricetorent&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[148]:&lt;/div&gt;

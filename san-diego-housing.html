@@ -479,10 +479,7 @@ iEjmaTejiIhknoqZiIhknoqZiIhknoqZiIhknoqZiIhknoqZiIhknoqZiIhknoqZiIhk3v8BRjrg
 
 </p>
 <p><strong>Prices</strong>: 
-Small available inventory leads to rising prices. I pulled the Zillow 5BR Home Price Index and looked at the following on a PSF basis. </p>
-<p>Median Listing Price Per Square Foot - Five Or More Bedrooms|MLPF5B
-Median Listing Price Per Square Foot - Four Bedrooms|MLPF4B
-Median Sold Price Per Square Foot - All Homes|MSPFAH</p>
+Small available inventory leads to rising prices. I pulled the Zillow 5BR Home Price Index and looked at the median sales and listing prices on a PSF basis. </p>
 <p>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -1052,6 +1049,20 @@ j6kJVsefAAAAAElFTkSuQmCC
 </p>
 <p><strong>Rental Yield</strong>: Home value is divided by 12 times its estimated monthly rent price. We plot the inverse of this to look at the rental yield (or cap rate in RE lingo).</p>
 <p>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[142]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pricetorent</span> <span class="o">=</span> <span class="n">q</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;ZILLOW/Z92130_PRRAH&#39;</span><span class="p">)</span>
+<span class="n">caprate</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">pricetorent</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[148]:</div>
