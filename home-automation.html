@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="https://lfeyao.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://lfeyao.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="https://lfeyao.github.io/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="https://lfeyao.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Dai's Blog Atom">
+
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+
+<meta name="author" content="Dai Yu" />
+<meta name="description" content="As a new parent, you'll find your kids want to watch the same videos/listen to the same songs over and over and over. For us, this has jumped between Moana, Frozen, Baby Shark, Lion King, StoryBots and Baby Einstein. Being able to play these videos/songs on demand via …" />
+<meta name="keywords" content="kids, home automation">
+<meta property="og:site_name" content="Dai's Blog"/>
+<meta property="og:title" content="Home Automation"/>
+<meta property="og:description" content="As a new parent, you'll find your kids want to watch the same videos/listen to the same songs over and over and over. For us, this has jumped between Moana, Frozen, Baby Shark, Lion King, StoryBots and Baby Einstein. Being able to play these videos/songs on demand via …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="https://lfeyao.github.io/home-automation.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-06-04 00:00:00-07:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="https://lfeyao.github.io/author/dai-yu.html">
+<meta property="article:section" content="Coding"/>
+<meta property="article:tag" content="kids"/>
+<meta property="article:tag" content="home automation"/>
+<meta property="og:image" content="">
+
+  <title>Dai's Blog &ndash; Home Automation</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="https://lfeyao.github.io">
+        <img src="https://lfeyao.github.io/theme/img/profile.png" alt="Dai Yu" title="Dai Yu">
+      </a>
+      <h1><a href="https://lfeyao.github.io">Dai Yu</a></h1>
+
+<p>Thinking Out Loud</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="http://lfeyao.github.io/category/finance.html" target="_blank">Finance</a></li>
+          <li><a href="http://lfeyao.github.io/category/coding.html" target="_blank">Coding</a></li>
+          <li><a href="http://lfeyao.github.io/category/random.html" target="_blank">Random</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-linkedin" href="https://www.linkedin.com/in/daiyu" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-facebook" href="https://www.facebook.com/dai.dan.yu" target="_blank"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="sc-plane" href="http://www.dai-yu.com" target="_blank"><i class="fa fa-plane"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+
+<article class="single">
+  <header>
+    <h1 id="home-automation">Home Automation</h1>
+    <p>
+          Posted on Mon 04 June 2018 in <a href="https://lfeyao.github.io/category/coding.html">Coding</a>
+
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>As a new parent, you'll find your kids want to watch the same videos/listen to the same songs over and over and over. For us, this has jumped between Moana, Frozen, Baby Shark, Lion King, StoryBots and Baby Einstein.</p>
+<p>Being able to play these videos/songs on demand via voice has been a huge help. Below is what I used to make my life easier.</p>
+<p><strong>Hardware:</strong></p>
+<ul>
+<li>
+<p>Amazon Dot - Very beneficial because of the Amazon music library included with Amazon Prime. I use Dot which has a 3.5mm jack to connect with my receiver. Has a number of other Alexa skills you can enable via app. Can also link to IFTTT via trigger command (I've used this to track babies feeding/poop etc).</p>
+</li>
+<li>
+<p>Google Mini - Mainly useful right now because of ability to directly say which youtube video you want to play (Alexa can't do this)</p>
+</li>
+<li>
+<p>Logitech Hub - Relays set of commands to your TV, receiver, etc like a universal remote except works with your phone via app and also with Alexa/Google.</p>
+</li>
+</ul>
+<p><strong>Software:</strong></p>
+<ul>
+<li>
+<p>https://github.com/rg3/youtube-dl - Downloads youtube videos to your computer. Useful for skipping ads. Also if your kids like a particular song unavailable on Amazon music, you can extract audio to mp3 and upload to your music library on Amazon to use with Alexa (youtube-dl -x --audio-format mp3 [link])</p>
+</li>
+<li>
+<p>https://github.com/xat/castnow - You can cast any home videos in mp4 and downloaded youtube videos to your chromecast. </p>
+</li>
+<li>
+<p>(Optional) https://github.com/sushilks/harmonyHubCLI - Command line interface for your Harmony Hub. Useful for really lazy people that want to bundle 3 voice commands into one bash command.</p>
+</li>
+<li>
+<p>(Optional) Termius for IOS - Allows you to ssh into your server from your phone and issue commands from your phone.</p>
+</li>
+</ul>
+<p>That's it, hopefully this was useful for some new parents!</p>
+<p>On a separate note, it was announced that MSFT acquired Github today. I really hope this doesn't lead to less projects on github else we'll need a search program for git projects.</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="https://lfeyao.github.io/tag/kids.html">kids</a>
+      <a href="https://lfeyao.github.io/tag/home-automation.html">home automation</a>
+    </p>
+  </div>
+
+
+
+
+</article>
+
+    <footer>
+<p>&copy; Dai Yu </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Dai's Blog ",
+  "url" : "https://lfeyao.github.io",
+  "image": "",
+  "description": ""
+}
+</script>
+</body>
+</html>
